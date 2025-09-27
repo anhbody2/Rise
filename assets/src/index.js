@@ -11,7 +11,7 @@ const router = require('./routers');
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Template engine
-            app.engine('hbs', exphbs.engine({ extname: '.hbs' }));
+app.engine('hbs', exphbs.engine({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
