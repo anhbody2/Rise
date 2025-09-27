@@ -1,0 +1,98 @@
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+/* Heart shape */
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: pulse 1s infinite alternate;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+/* Heart breaks into two */
+.heart-break {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  animation: break 2s forwards;
+  animation-delay: 1.5s;
+}
+
+.heart-break::before,
+.heart-break::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart-break::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart-break::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+}
+@keyframes break {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-45deg) translate(-50px, 50px);
+  }
+}
+
+/*# sourceMappingURL=splash_screen.css.map */

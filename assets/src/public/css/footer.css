@@ -1,0 +1,65 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    background: #111;
+    color: #fff;
+}
+
+.footer-left h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 40px;
+}
+
+.footer-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form input {
+    padding: 8px 12px;
+    width: 600px;
+    height: 30px;
+    border-radius: 20px 0 0 12px;
+    border: none;
+    outline: none;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    border: none;
+    background: #01949f;
+    color: #fff;
+    border-radius: 0 12px 20px 0;
+    cursor: pointer;
+}
+
+.footer-right {
+    display: flex;
+    gap: 40px;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link-column a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-column a:hover {
+    color: #fff;
+}
+
+/*# sourceMappingURL=footer.css.map */

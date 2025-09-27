@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px); /* glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.8rem 2rem;
+    border-radius: 14px; /* rounded floating shape */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    width: 40%; /* not full width 60% for phone size 40% for bigger*/
+    margin: 1rem auto; /* center it */
+    line-height: 40px;
+}
+
+.navbar .logo {
+    color: #113f67;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+    color: #113f67;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #4588be;
+    transform: scale(1.05);
+}
+
+/*# sourceMappingURL=nav_bar.css.map */

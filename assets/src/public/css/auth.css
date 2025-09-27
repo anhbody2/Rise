@@ -1,0 +1,31 @@
+.auth-container {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+.auth-container input,
+.auth-container button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+}
+
+.auth-container input {
+    border: 1px solid #ccc;
+    width: calc(100% - 1.7rem);
+}
+
+.auth-container button {
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*# sourceMappingURL=auth.css.map */

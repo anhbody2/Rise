@@ -1,0 +1,48 @@
+{
+  "name": "rise_clothes",
+  "version": "1.0.0",
+  "description": "backend working with nodejs+express",
+  "keywords": [
+    "backend",
+    "Rise",
+    "nodejs",
+    "Rise",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/anhbody2/Rise#readme",
+  "bugs": {
+    "url": "https://github.com/anhbody2/Rise/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhbody2/Rise.git"
+  },
+  "license": "ISC",
+  "author": "Tuan Anh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "lint-staged",
+    "start": "nodemon --inspect assets/src/index.js",
+    "watch": "sass --watch assets/src/resources/scss:assets/src/public/css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,hbs,css,scss,json,md}": [
+      "prettier --write --tab-width 4 --single-quote"
+    ]
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.1",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "sass": "^1.93.2"
+  }
+}

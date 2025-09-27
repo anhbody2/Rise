@@ -1,0 +1,50 @@
+<html lang='en'>
+
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>Cart Page</title>
+
+    </head>
+
+    <body>
+        <div class='cart-container'>
+            <!-- Left side: Products -->
+            <div class='cart-products'>
+                <section class='products'>
+                    <div class='product-grid' id='product-cart-list'>
+                        <!-- Product cards injected via JS -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right side: Summary -->
+            <div class='cart-summary' id='cartSummary'>
+                <div class='summary-item' id='summary-item-p1'></div>
+                <div class='summary-item' id='summary-item-p2'></div>
+            </div>
+        </div>
+
+        <!-- Navbar bottom -->
+        <div class='navbar'>
+            <div class='navbar-left'>
+                <div class='user-avatar'><img
+                        src='assets/images/users-profile/visitor.jpg'
+                        alt=''
+                    /></div>
+                <button class='nav-btn'><a href='index.html'>Home</a></button>
+                <button class='nav-btn'>Login</button>
+            </div>
+
+            <div class='navbar-right'>
+                <button id='selectAll' class='select-all'></button>
+                <button class='checkout'>Checkout</button>
+            </div>
+        </div>
+
+        <script type='module' src='assets/js/main.js'></script>
+        <script type='module' src='assets/js/change_to_payment.js'></script>
+        <script type='module' src='assets/js/cartUI.js'></script>
+    </body>
+
+</html>

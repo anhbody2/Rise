@@ -1,0 +1,179 @@
+/* Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Container */
+.product-container {
+    margin-top: 60px;
+    padding: 20px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Carousel */
+.image-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Accordion */
+.accordion {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.accordion-header:hover {
+    background: #eee;
+}
+.accordion-content {
+    display: none;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.colors {
+    display: flex;
+    gap: 10px;
+}
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+.color-btn.red {
+    background: red;
+}
+.color-btn.blue {
+    background: blue;
+}
+.color-btn.black {
+    background: black;
+}
+.color-btn.grey {
+    background: grey;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-cart {
+    background: #f0f0f0;
+}
+.add-cart:hover {
+    background: #ddd;
+}
+.purchase {
+    background: #111;
+    color: #fff;
+}
+.purchase:hover {
+    background: #333;
+}
+.color-btn.active,
+.size-btn.active {
+    border: 2px solid #000;
+    transform: scale(1.05);
+}
+
+.product-option {
+    margin: 10px 0;
+}

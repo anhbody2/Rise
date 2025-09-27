@@ -1,0 +1,59 @@
+<!-- Transparent Navbar -->
+<nav class='navbar'>
+    <div class='logo'>RISE</div>
+</nav>
+
+<div class='product-container'>
+    <div class='grid'>
+        <!-- Left: Image Carousel + Accordion -->
+        <div class='left-column'>
+            <div class='image-section'>
+                <div class='carousel'>
+                    <!-- remove buttons if you don’t need them -->
+                    <div class='carousel-track' id='carousel-track'></div>
+                </div>
+            </div>
+
+            <div class='accordion' id='accordion'></div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class='info-section'>
+            <h1 id='product-name'></h1>
+            <p id='product-price'></p>
+            <p id='product-stock'></p>
+            <p id='product-story'></p>
+
+            <!-- Colors -->
+            <div class='product-option'>
+                <label>Color:</label>
+                <div id='color-options' class='color-options'></div>
+            </div>
+
+            <!-- Sizes -->
+            <div class='product-option'>
+                <label>Size:</label>
+                <div id='size-options' class='size-options'></div>
+            </div>
+
+            <!-- Quantity -->
+            <!-- Quantity -->
+            <div class='product-option'>
+                <label>Quantity:</label>
+                <div class='quantity-control'>
+                    <button id='decrease-qty' class='qty-btn'>-</button>
+                    <input type='text' id='quantity' value='1' />
+                    <button id='increase-qty' class='qty-btn'>+</button>
+                </div>
+            </div>
+            <!-- Actions -->
+            <div class='actions'>
+                <button id='add-to-cart' class='btn add-cart'>Add to Cart</button>
+                <button id='purchase' class='btn purchase'>Purchase</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type='module' src='assets/js/navigate.js'></script>
