@@ -19,6 +19,7 @@ html {
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
+
 .navbar .logo {
     font-size: 20px;
     font-weight: bold;
@@ -28,9 +29,8 @@ html {
 /* Container */
 .product-container {
     margin-top: 60px;
-    padding: 20px;
+    padding: 20px 0;
     width: 100%;
-    height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
 }
@@ -78,15 +78,20 @@ html {
     object-fit: contain;
     border-radius: 10px;
 }
-
+/* Column */
+.left-column{
+    padding-left: 20px;
+}
 /* Accordion */
 .accordion {
     margin-top: 20px;
     border-top: 1px solid #ddd;
 }
+
 .accordion-item {
     border-bottom: 1px solid #ddd;
 }
+
 .accordion-header {
     width: 100%;
     text-align: left;
@@ -97,9 +102,11 @@ html {
     outline: none;
     cursor: pointer;
 }
+
 .accordion-header:hover {
     background: #eee;
 }
+
 .accordion-content {
     display: none;
     padding: 12px;
@@ -112,6 +119,7 @@ html {
     flex-direction: column;
     gap: 20px;
 }
+
 .product-name {
     font-size: 28px;
     font-weight: bold;
@@ -122,6 +130,7 @@ html {
     display: flex;
     gap: 10px;
 }
+
 .color-btn {
     width: 30px;
     height: 30px;
@@ -129,15 +138,23 @@ html {
     border: 2px solid #ddd;
     cursor: pointer;
 }
+.size-options{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
 .color-btn.red {
     background: red;
 }
+
 .color-btn.blue {
     background: blue;
 }
+
 .color-btn.black {
     background: black;
 }
+
 .color-btn.grey {
     background: grey;
 }
@@ -145,7 +162,9 @@ html {
 .actions {
     display: flex;
     gap: 15px;
+    padding: 10px;;
 }
+
 .btn {
     flex: 1;
     padding: 12px;
@@ -155,19 +174,24 @@ html {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .add-cart {
     background: #f0f0f0;
 }
+
 .add-cart:hover {
     background: #ddd;
 }
+
 .purchase {
     background: #111;
     color: #fff;
 }
+
 .purchase:hover {
     background: #333;
 }
+
 .color-btn.active,
 .size-btn.active {
     border: 2px solid #000;

@@ -1,0 +1,69 @@
+{
+  "_SharedSystems-Cyc79a5O.js": {
+    "file": "assets/SharedSystems-Cyc79a5O.js",
+    "name": "SharedSystems",
+    "imports": [
+      "index.html",
+      "_colorToUniform-DmtBy-2V.js"
+    ]
+  },
+  "_colorToUniform-DmtBy-2V.js": {
+    "file": "assets/colorToUniform-DmtBy-2V.js",
+    "name": "colorToUniform"
+  },
+  "index.html": {
+    "file": "assets/index-BfiBaQ_e.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/pixi.js/lib/environment-browser/browserAll.mjs",
+      "node_modules/pixi.js/lib/environment-webworker/webworkerAll.mjs",
+      "node_modules/pixi.js/lib/rendering/renderers/gpu/WebGPURenderer.mjs",
+      "node_modules/pixi.js/lib/rendering/renderers/gl/WebGLRenderer.mjs"
+    ]
+  },
+  "node_modules/pixi.js/lib/environment-browser/browserAll.mjs": {
+    "file": "assets/browserAll-CIaXJPpD.js",
+    "name": "browserAll",
+    "src": "node_modules/pixi.js/lib/environment-browser/browserAll.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "node_modules/pixi.js/lib/environment-webworker/webworkerAll.mjs",
+      "_colorToUniform-DmtBy-2V.js"
+    ]
+  },
+  "node_modules/pixi.js/lib/environment-webworker/webworkerAll.mjs": {
+    "file": "assets/webworkerAll-C9AoBesg.js",
+    "name": "webworkerAll",
+    "src": "node_modules/pixi.js/lib/environment-webworker/webworkerAll.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_colorToUniform-DmtBy-2V.js"
+    ]
+  },
+  "node_modules/pixi.js/lib/rendering/renderers/gl/WebGLRenderer.mjs": {
+    "file": "assets/WebGLRenderer-DPqvw3X5.js",
+    "name": "WebGLRenderer",
+    "src": "node_modules/pixi.js/lib/rendering/renderers/gl/WebGLRenderer.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_colorToUniform-DmtBy-2V.js",
+      "_SharedSystems-Cyc79a5O.js"
+    ]
+  },
+  "node_modules/pixi.js/lib/rendering/renderers/gpu/WebGPURenderer.mjs": {
+    "file": "assets/WebGPURenderer-4ZjIqVKO.js",
+    "name": "WebGPURenderer",
+    "src": "node_modules/pixi.js/lib/rendering/renderers/gpu/WebGPURenderer.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_colorToUniform-DmtBy-2V.js",
+      "_SharedSystems-Cyc79a5O.js"
+    ]
+  }
+}

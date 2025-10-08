@@ -1,85 +1,61 @@
+{{#section "css"}}
+
+<link rel='stylesheet' href='/css/banner.css' />
+<link rel='stylesheet' href='/css/product.css' />
+<link rel='stylesheet' href='/css/splash_screen.css' />
+<link rel='stylesheet' href='/css/chain.css' />
+
+{{/section}}
+
 <body>
-    <!-- Splash Screen -->
-    <!-- <div id="splash-screen">
+  <!-- Splash Screen -->
+  <!-- <div id="splash-screen">
     <div class="heart"></div>
     <div class="heart-break"></div>
   </div> -->
-    <!-- Navbar -->
+  <!-- Navbar -->
 
-    <header>
-        <nav class='navbar'>
-            <div class='logo'>Rise</div>
-            <ul class='nav-links'>
-            </ul>
-        </nav>
-        <!-- Banner -->
-        <section class='banner'>
+  <header>
+    <!-- Banner -->
+    <section class='banner'>
 
-            <div class='banner-content'>
-                <h1>Welcome to Rise Shop</h1>
-                <p>Your one-stop shop for all things awesome!</p>
-                <button
-                    class='shop-now-btn'
-                    onclick="window.location.href='#product-list'"
-                >Shop Now</button>
-            </div>
+      <div class='banner-content'>
+        <h1>Welcome to Rise Shop</h1>
+        <p>Your one-stop shop for all things awesome!</p>
+        <button class='shop-now-btn' onclick="window.location.href='#product-list'">Shop Now</button>
+      </div>
 
-        </section>
-        <section class='product-showcase'>
-            <div class='product-track' id='product-track'>
-
-            </div>
-        </section>
-    </header>
-    <section class='bottom-nav'>
-        <div class='bottom-left'>
-            <div class='circle-img'>
-                {{! <img src="assets/images/users-profile/visitor.jpg" alt="Logo"> }}
-            </div>
-        </div>
-        <div class='bottom-right'>
-            <a href='/'>Home</a>
-            <a href='/login'>Login</a>
-            <a href='cart.html'>Cart</a>
-        </div>
     </section>
+    <section class='product-showcase'>
+      <div class='product-track' id='product-track'>
 
-    <!-- Products -->
-    <section class='products'>
-        <h2>Featured Products</h2>
-        <div class='product-grid' id='product-list'>
-            <!-- Product cards injected via JS -->
-        </div>
+      </div>
     </section>
+  </header>
+
+  <!-- Products -->
+  <section class='products'>
+    <h2>Featured Products</h2>
+    <div class='product-grid' id='product-list'>
+      {{#each products}}
+      <div class="product-card">
+        <a href="product/{{this.category}}/{{this.slug}}"><img src="/img/products/{{this.image.[0]}}"
+            alt="{{this.image}}"></a>
+        <h3>{{this.name}}</h3>
+        <p></p>
+        <div class="product-actions">
+          <div class="sizes">
+            {{#each this.sizes}}
+            <span>{{this.label}}</span>
+            {{/each}}
+
+          </div>
+        </div>
+      </div>
+
+      {{/each}}
+
+    </div>
+  </section>
 
 </body>
-<footer class='footer'>
-    <div class='footer-left'>
-        <h2>RISE@project</h2>
-    </div>
-
-    <div class='footer-middle'>
-        <form class='search-form'>
-            <input type='text' placeholder='Search...' />
-            <button type='submit'>Search</button>
-        </form>
-    </div>
-
-    <div class='footer-right'>
-        <div class='link-column'>
-            <a href='#'>About Us</a>
-            <a href='#'>Services</a>
-            <a href='#'>Careers</a>
-        </div>
-        <div class='link-column'>
-            <a href='#'>Support</a>
-            <a href='#'>Contact</a>
-            <a href='#'>Privacy Policy</a>
-        </div>
-    </div>
-</footer>
-
-<script type='module' src='/assets/js/main.js'></script>
-<script type='module' src='/assets/js/cart.js'></script>
-<script type='module' src='/assets/js/splash.js'></script>
-<script type='module' src='/assets/js/product_showcase.js'></script>

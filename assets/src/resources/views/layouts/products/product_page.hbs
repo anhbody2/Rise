@@ -1,7 +1,10 @@
-<!-- Transparent Navbar -->
-<nav class='navbar'>
-    <div class='logo'>RISE</div>
-</nav>
+{{#section "css"}}
+
+<link rel='stylesheet' href='/css/product_details.css' />
+
+
+
+{{/section}}
 
 <div class='product-container'>
     <div class='grid'>
@@ -10,30 +13,57 @@
             <div class='image-section'>
                 <div class='carousel'>
                     <!-- remove buttons if you don’t need them -->
-                    <div class='carousel-track' id='carousel-track'></div>
+                    <div class='carousel-track' id='carousel-track'>
+                        {{#each product.image}}
+                            <div class='carousel-item'>
+                                <img src='/img/products/{{this}}' alt='{{../product.name}}' />
+                            </div>
+                        {{/each}}
+                    </div>
                 </div>
             </div>
 
-            <div class='accordion' id='accordion'></div>
+            <div class='accordion' id='accordion'>
+                {{#each product.details}}
+                    <div class='accordion-item'>
+                        <button class='accordion-header'>{{@key}}</button>
+                        <div class='accordion-content'>
+                            <p>{{this}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
         </div>
 
         <!-- Right: Info -->
         <div class='info-section'>
-            <h1 id='product-name'></h1>
-            <p id='product-price'></p>
-            <p id='product-stock'></p>
-            <p id='product-story'></p>
+            <h1 id='product-name'>{{product.name}}</h1>
+            <p id='product-price'>{{product.price}}</p>
+            <p id='product-stock'>
+                {{#each product.sizes}}
+                    <div>{{this.label}}: {{#if this.stock}}In Stock{{else}}Out of Stock{{/if}}</div>
+                {{/each}}
+            </p>
+            <p id='product-story'>{{product.description}}</p>
 
             <!-- Colors -->
             <div class='product-option'>
                 <label>Color:</label>
-                <div id='color-options' class='color-options'></div>
+                <div id='color-options' class='color-options'>
+                    {{#each product.color}}
+                        <button class='color-btn' id="color-btn" style='background-color: {{this}};'></button>
+                    {{/each}}
+                </div>
             </div>
 
             <!-- Sizes -->
             <div class='product-option'>
                 <label>Size:</label>
-                <div id='size-options' class='size-options'></div>
+                <div id='size-options' class='size-options'>
+                    {{#each product.sizes}}
+                        <button class='size-btn'>{{this.label}}</button>
+                    {{/each}}
+                </div>
             </div>
 
             <!-- Quantity -->
@@ -56,4 +86,5 @@
     </div>
 </div>
 
-<script type='module' src='assets/js/navigate.js'></script>
+
+

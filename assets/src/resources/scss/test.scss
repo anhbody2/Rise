@@ -1,0 +1,50 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  image-rendering: pixelated; /* Makes images keep hard edges */
+}
+button{
+  content: " ";
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+}
+// .pixel-btn img {
+//   content: url("/img/button/buttonPlay_n1.png");
+//   box-shadow: 10px 10px;
+// }
+
+// .pixel-btn:active img {
+//   content: url("/img/button/buttonPlay_n3.png");
+// }
+.pixel-btn {
+  width: 256px;
+  height: 256px;
+  background: url("/img/button/buttonPlay_n1.png") no-repeat center/contain;
+  image-rendering: pixelated;
+  border: none;
+  cursor: pointer;
+}
+.pixel-btn:hover{
+  background: url("/img/button/buttonPlay_n3.png") no-repeat center/contain;
+}
+.pixel-btn:active {
+  background: url("/img/button/buttonPlay_n4.png") no-repeat center/contain;
+}
+
+
+
+.test {
+  border: 36px solid transparent;
+  border-image-source: url('/img/newnavbarSvg.svg');
+  border-image-slice: 0 15 60 0 fill; /* balanced cuts */
+  border-image-width: 16px;
+  border-image-repeat: stretch; /* switch from round → stretch for now */
+  image-rendering: pixelated;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  background-color: #000; /* test visibility */
+  color: #fff;
+height: 80px;  /* match your design */
+}
+
